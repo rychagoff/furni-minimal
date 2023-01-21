@@ -40,6 +40,10 @@ body {
 	position: relative;
 	overflow-x: hidden;
 }
+a {
+	color: var(--accent);
+	font-feature-settings: 'pnum' on, 'lnum' on;
+}
 
 /* USER STYLES */
 
@@ -52,4 +56,8 @@ body {
 .accent {
 	color: var(--accent);
 	font-weight: bold;
+}
+
+.menu {
+	list-style-type: none;
 }
