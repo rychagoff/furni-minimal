@@ -1,10 +1,11 @@
 /* USER VARIABLES SECTION */
 
 :root {
-	--accent: #D3BE73;
+	--accent: #C6B166;
 	--text: #333;
+	--heading: #27302E;
 	--regular-text: 16px;
-	--lineheight: 1.7;
+	--lineheight: 1.75em;
 	--userfont: opensans-st, sans-serif;
 	--headingfont: raleway-st, sans-serif;
 	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
@@ -19,6 +20,7 @@
 /* FONTS LOAD SECTION */
 
 @font-face { src: url("../fonts/raleway-regular.woff2") format("woff2"); font-family: "raleway-st"; font-weight: 400; font-style: normal; }
+@font-face { src: url("../fonts/raleway-medium.woff2") format("woff2"); font-family: "raleway-st"; font-weight: 500; font-style: normal; }
 @font-face { src: url("../fonts/raleway-semibold.woff2") format("woff2"); font-family: "raleway-st"; font-weight: 600; font-style: normal; }
 @font-face { src: url("../fonts/raleway-bold.woff2") format("woff2"); font-family: "raleway-st"; font-weight: 700; font-style: normal; }
 @font-face { src: url("../fonts/opensans-regular.woff2") format("woff2"); font-family: "opensans-st"; font-weight: 400; font-style: normal; }
@@ -31,6 +33,10 @@ input, textarea { outline: none; }
 input:focus:required:invalid, textarea:focus:required:invalid { border-color: red; }
 input:required:valid, textarea:required:valid { border-color: green; }
 
+* {
+	transition: .3s;
+}
+
 body {
 	font-family: var(--userfont);
 	font-size: var(--regular-text);
@@ -41,8 +47,12 @@ body {
 	overflow-x: hidden;
 }
 a {
-	color: var(--accent);
+	color: var(--text);
 	font-feature-settings: 'pnum' on, 'lnum' on;
+	text-decoration: none;
+}
+a:hover {
+	color: var(--accent);
 }
 
 /* USER STYLES */
@@ -53,11 +63,28 @@ a {
 	border-radius: 4px;
 }
 
-.accent {
-	color: var(--accent);
-	font-weight: bold;
+.main {
+	padding: 50px 0 90px;
 }
 
 .menu {
 	list-style-type: none;
+}
+.menu .menu__item {
+	display: inline-block;
+}
+.menu .menu__item:not(:last-child) {
+	margin-right: 35px;
+}
+
+.callback .callback__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.callback .callback__phone {
+	font-family: var(--headingfont);
+	font-weight: 500;
+	font-size: 1.5rem;
+	color: var(--heading);
 }
