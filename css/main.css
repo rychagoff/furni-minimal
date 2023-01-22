@@ -99,9 +99,6 @@ a:hover {
 .section__content {
 	height: 100%;
 }
-.section__content {
-
-}
 .section__soc .section__soc-items {
 	display: flex;
 	flex-direction: column;
