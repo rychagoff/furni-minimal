@@ -1,14 +1,19 @@
-import Swiper from 'swiper'
-
 document.addEventListener('DOMContentLoaded', () => {
 
-	const swiper = new Swiper('.swiper', {
-		direction: 'vertical',
+	const swiperimg = new Swiper('.furni-bg', {
+		direction: 'horizontal',
 		loop: true,
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
-	});
-	
+	})
+	const swipertext = new Swiper('.furni-text', {
+		direction: 'horizontal',
+		loop: true,
+	})
+
+	swiperimg.controller.control = swipertext
+	swipertext.controller.control = swiperimg
+
 })
