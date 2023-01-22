@@ -37,6 +37,9 @@ input:required:valid, textarea:required:valid { border-color: green; }
 	transition: .3s;
 }
 
+html, body {
+	height: 100%;
+}
 body {
 	font-family: var(--userfont);
 	font-size: var(--regular-text);
@@ -65,6 +68,10 @@ a:hover {
 
 .main {
 	padding: 50px 0 90px;
+	height: 100%;
+}
+.section {
+	height: 100%;
 }
 
 .menu {
@@ -87,4 +94,21 @@ a:hover {
 	font-weight: 500;
 	font-size: 1.5rem;
 	color: var(--heading);
+}
+
+.section__content {
+	height: 100%;
+}
+.section__content {
+
+}
+.section__soc .section__soc-items {
+	display: flex;
+	flex-direction: column;
+}
+.section__soc .section__soc-items .soc-item:hover {
+	transform: scale(1.1);
+}
+.section__soc .section__soc-items .soc-item:not(:last-child) {
+	margin-bottom: 25px;
 }
