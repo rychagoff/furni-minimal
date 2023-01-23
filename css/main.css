@@ -1,4 +1,4 @@
-/* USER VARIABLES SECTION */
+/* VARIABLES SECTION */
 
 :root {
 	--accent-text: #C6B166;
@@ -37,10 +37,6 @@ input:required:valid, textarea:required:valid { border-color: green; }
 * {
 	box-sizing: border-box;
 }
-a, button, ::after {
-	transition: .3s;
-}
-
 html, body {
 	height: 100%;
 }
@@ -49,9 +45,13 @@ body {
 	font-size: var(--regular-text);
 	line-height: var(--lineheight);
 	color: var(--text);
+	background-color: #f9f9f9;
 	min-width: 320px;
 	position: relative;
 	overflow-x: hidden;
+}
+section.section {
+	padding: 50px 0 60px;
 }
 a {
 	color: var(--text);
@@ -63,6 +63,7 @@ a:hover {
 }
 h1, h2, h3, h4, h5, h6 {
 	color: var(--heading);
+	font-family: var(--headingfont);
 	margin-bottom: 1.25rem;
 }
 button {
@@ -80,19 +81,24 @@ button:hover {
 	background-color: var(--accent);
 	color: #fff;
 }
-
-/* USER STYLES */
-
+a, button, ::after {
+	transition: .3s;
+}
 .image {
 	max-width: 100%;
 	margin-bottom: var(--bs-gutter-x);
 	border-radius: 4px;
 }
 
-.main {
-	padding: 50px 0 90px;
-	background-color: #f9f9f9;
+/* USER STYLES */
+/* HEADER */
+.section-header .section-header__line {
+	display: flex;
+	align-items: center;
+	margin-bottom: 60px;
 }
+
+/* MENU */
 
 .menu {
 	list-style-type: none;
@@ -104,7 +110,9 @@ button:hover {
 	margin-right: 35px;
 }
 
-.callback .callback__wrapper {
+/* CALLBACK */
+
+.callback {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
@@ -115,10 +123,37 @@ button:hover {
 	font-size: 1.5rem;
 	color: var(--heading);
 }
+.callback .callback__phone:hover {
+	color: var(--accent);
+}
+.callback .callback__text {
+	color: var(--accent-text);
+	position: relative;
+}
+.callback .callback__text::after {
+	content: '';
+	display: block;
+	background-color: var(--accent-text);
+	position: absolute;
+	width: 0;
+	height: 1px;
+	/*opacity: 0;*/
+}
+.callback .callback__text:hover::after {	
+	/*opacity: 1;*/
+	width: 100%;
+}
 
+/* SOCIAL ICONS */
+
+.section__soc {
+	height: 100%;
+	display: flex;
+}
 .section__soc .section__soc-items {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 }
 .section__soc .section__soc-items .soc-item:hover {
 	transform: scale(1.1);
@@ -126,6 +161,8 @@ button:hover {
 .section__soc .section__soc-items .soc-item:not(:last-child) {
 	margin-bottom: 25px;
 }
+
+/* SLIDER */
 
 .furni-bg {
 	height: 825px;
@@ -160,7 +197,6 @@ button:hover {
 	margin-bottom: 65px;
 }
 .furni-text .furni-text__slide .furni-text__content .heading {
-	font-family: var(--headingfont);
 	font-weight: 400;
 	font-size: 3.5rem;
 }
@@ -201,4 +237,32 @@ button:hover {
 }
 .furni-bg__nav .prev:hover::after, .furni-bg__nav .next:hover::after {
 	background-color: var(--heading);
+}
+
+/* SECTION ADVANTAGES */
+
+.section-advantages__about {
+	margin-bottom: 65px;
+}
+.section-advantages__about .heading {
+	font-size: 2.75rem;
+}
+.section-advantages__item {
+	display: flex;
+	flex-direction: column;
+	padding-right: 90px;
+}
+.section-advantages__item .section-advanatges__heading {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.section-advantages__item .section-advanatges__heading img {
+	margin-right: 25px;
+}
+.section-advantages__item .section-advanatges__heading .heading {
+	font-size: 1.5rem;
+	line-height: 1.5;
+	font-weight: 600;
+	margin: 0;
 }
