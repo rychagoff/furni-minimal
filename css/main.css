@@ -53,7 +53,7 @@ body {
 	overflow-x: hidden;
 }
 section.section {
-	padding: 50px 0 60px;
+	margin-bottom: 160px;
 }
 a {
 	color: var(--text);
@@ -370,7 +370,7 @@ a, button, ::after {
 .why .why__content {
 	background-color: #f9f9f9;
 	padding: 60px 55px;
-	margin: 0 22px;
+	margin: 165px 22px 189px;
 }
 .why .why__content .why__text + .why__text {
 	margin: 0;
