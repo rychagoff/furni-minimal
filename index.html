@@ -11,8 +11,10 @@
 	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/main.css">
 
-	<script type="module" src="libs/swiper/swiper-bundle.min.js"></script>
-	<script src="js/app.js"></script>
+	<script type="module" src="libs/swiper/swiper-bundle.min.js" defer></script>
+	<script src="libs/cleave/cleave.min.js" defer></script>
+	<script type="module" src="libs/cleave/addons/cleave-phone.i18n.js" defer></script>
+	<script src="js/app.js" defer></script>
 </head>
 <body>
 
@@ -170,6 +172,66 @@
 							</div>
 
 						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</section>
+
+		<section class="section order">
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col">
+						<h2 class="section-heading order__heading">Как заказать?</h2>
+					</div>
+
+				</div>
+
+				<div class="row">
+
+					<div class="col-4">
+						<div class="section-item order__item">
+							<div class="item__number">01</div>
+							<h3 class="item__heading">Заявка</h3>
+							<div class="item__text">Оставьте заявку на сайте или позвоните нам по номеру <a href="tel:+78002060107">8 (800) 206 01 07</a></div>
+						</div>
+					</div>
+					<div class="col-4">
+						<div class="section-item order__item">
+							<div class="item__number">02</div>
+							<h3 class="item__heading">Созвон с менеджером</h3>
+							<div class="item__text">В течение 15 минут вам перезвонит менеджер и назначит время доставки</div>
+						</div>
+					</div>
+					<div class="col-4">
+						<div class="section-item order__item">
+							<div class="item__number">03</div>
+							<h3 class="item__heading">Доставка</h3>
+							<div class="item__text">На следующий день мы доставим мебель прямо в ваш дом (квартиру)</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="row">
+
+					<div class="col">
+						<form class="form order__form" method="post" name="order-form" action="">
+							<div class="form__item">
+								<input type="text" class="form__input name" name="order-name" placeholder="Ваше имя">
+							</div>
+							<div class="form__item">
+								<input type="text" class="form__input phone" name="order-phone" placeholder="Ваш телефон">
+							</div>
+							<div class="form__item">
+								<button class="form__button">Отправить заявку</button>
+								<p class="form__privacy">Нажимая на кнопку, вы даёте согласие на обработку <a href="#">персональных данных</a></p>
+							</div>
+						</form>
 					</div>
 
 				</div>
