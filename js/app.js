@@ -16,10 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	swiperimg.controller.control = swipertext
 	swipertext.controller.control = swiperimg
 
-	const cleave = new Cleave('.phone', {
+	let cleaveorder = new Cleave('.order__phone', {
+		phone: true,
+		phoneRegionCode: '{country}'
+	})
+	let cleaveconsult = new Cleave('.consult__phone', {
 		phone: true,
 		phoneRegionCode: '{country}'
 	})
 
 })
-

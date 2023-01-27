@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: var(--heading);
 	font-family: var(--headingfont);
 	font-weight: 400;
-	margin-bottom: 1.25rem;
+	margin-bottom: 30px;
 }
 button {
 	border: 2px solid var(--accent);
