@@ -26,6 +26,7 @@
 @font-face { src: url("../fonts/raleway-semibold.woff2") format("woff2"); font-family: "raleway-st"; font-weight: 600; font-style: normal; }
 @font-face { src: url("../fonts/raleway-bold.woff2") format("woff2"); font-family: "raleway-st"; font-weight: 700; font-style: normal; }
 @font-face { src: url("../fonts/opensans-regular.woff2") format("woff2"); font-family: "opensans-st"; font-weight: 400; font-style: normal; }
+@font-face { src: url("../fonts/opensans-bold.woff2") format("woff2"); font-family: "opensans-st"; font-weight: 700; font-style: normal; }
 
 /* GENERAL CSS SETTINGS */
 
@@ -52,7 +53,7 @@ body {
 	overflow-x: hidden;
 }
 section.section {
-	padding: 50px 0 60px;
+	margin-bottom: 160px;
 }
 a {
 	color: var(--text);
@@ -66,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: var(--heading);
 	font-family: var(--headingfont);
 	font-weight: 400;
-	margin-bottom: 1.25rem;
+	margin-bottom: 30px;
 }
 button {
 	border: 2px solid var(--accent);
@@ -356,4 +357,21 @@ a, button, ::after {
 }
 .form .form__item .form__privacy a:hover::after {
 	width: 100%;
+}
+
+/* WHY SECTION */
+
+.section.why {
+	background-image: url(../img/why-bg.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	max-height: 863px;
+}
+.why .why__content {
+	background-color: #f9f9f9;
+	padding: 60px 55px;
+	margin: 165px 22px 189px;
+}
+.why .why__content .why__text + .why__text {
+	margin: 0;
 }
