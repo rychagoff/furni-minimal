@@ -5,6 +5,7 @@
 	--accent: #D3BE73;
 	--text: #333;
 	--heading: #27302E;
+	--gray: #6a716f;
 	--regular-text: 16px;
 	--lineheight: 1.75em;
 	--userfont: opensans-st, sans-serif;
@@ -55,8 +56,8 @@ section.section {
 }
 a {
 	color: var(--text);
-	font-feature-settings: 'pnum' on, 'lnum' on;
 	text-decoration: none;
+	font-feature-settings: 'pnum' on, 'lnum' on;
 }
 a:hover {
 	color: var(--accent-text);
@@ -64,6 +65,7 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
 	color: var(--heading);
 	font-family: var(--headingfont);
+	font-weight: 400;
 	margin-bottom: 1.25rem;
 }
 button {
@@ -265,4 +267,93 @@ a, button, ::after {
 	line-height: 1.5;
 	font-weight: 600;
 	margin: 0;
+}
+
+/* ORDER */
+
+.section-heading {
+	font-size: 45px;
+}
+.order__heading {
+	margin-bottom: 40px;
+}
+.order__item .item__number {
+	font-family: var(--headingfont);
+	font-weight: 600;
+	font-size: 1.5rem;
+	color: var(--accent-text);
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	margin-bottom: 15px;
+}
+.order__item .item__heading {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+.order__item .item__text {
+	margin-bottom: 65px;
+}
+.order__item .item__text a {
+	display: inline-block;
+	color: var(--accent-text);
+	position: relative;
+}
+.order__item .item__text a::after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	height: 1px;
+	width: 0%;
+	background-color: var(--accent-text);
+}
+.order__item .item__text a:hover::after {
+	width: 100%;
+}
+.form {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+.form .form__item {
+	position: relative;
+}
+.form .form__item .form__input {
+	width: 260px;
+	height: 86px;
+	margin-right: 40px;
+	padding-bottom: 10px;
+	border-width: 0 0 2px 0px;
+	border-color: var(--accent);
+	background-color: #f9f9f9;
+	text-transform: uppercase;
+	font-family: var(--headingfont);
+	font-weight: 500;
+	font-size: 18px;
+	letter-spacing: 2px;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+}
+.form .form__item .form__input::placeholder {
+	color: var(--gray);
+}
+.form .form__item .form__privacy {
+	color: var(--gray);
+	font-size: 13px;
+	margin: 15px 0 0;
+	line-height: 1.6;
+}
+.form .form__item .form__privacy a {
+	color: var(--accent-text);
+	position: relative;
+}
+.form .form__item .form__privacy a::after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	height: 1px;
+	width: 0%;
+	background-color: var(--accent-text);
+}
+.form .form__item .form__privacy a:hover::after {
+	width: 100%;
 }
