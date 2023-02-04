@@ -506,3 +506,36 @@ img {
 	content: 'Скрыть отзыв';
 	/*display: block;*/
 }
+
+/* QUESTIONS */
+
+.questions__item {
+	background-color: #fff;
+	margin-bottom: 7px;
+}
+.questions__item details {
+	padding: 45px 55px;
+}
+.questions__item details summary {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	list-style: none;
+	font-family: var(--headingfont);
+	font-weight: 500;
+	font-size: 1.5rem;
+}
+.questions__item details summary::after {
+	content: '';
+	flex: 0 0 40px;
+	height: 40px;
+	background-image: url(../img/cross.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.questions__item details[open] summary::after {
+	transform: rotate(45deg);
+}
+.questions__item details p {
+	margin: 20px 0 0;
+}

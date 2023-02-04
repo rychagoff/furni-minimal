@@ -44,4 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 	})
 
+	const accordeons = document.querySelectorAll('.questions__details');
+
+
 })
